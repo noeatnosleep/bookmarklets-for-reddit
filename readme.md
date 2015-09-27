@@ -21,11 +21,11 @@ Open banned page of current subreddit:
 	javascript:(function(){var url = document.URL.match(new RegExp("/r/[a-zA-Z0-9_\-]*"));window.location.href = "http://www.reddit.com" + url +"/about/banned"})()
 
 
-Modmail current page using scraping:
+Modmail current page to the subreddit you're on, using scraping:
 
 	javascript:(function(){var sub = document.URL.match(/\/r\/[a-z0-9_]+/i);window.location.href ="https://www.reddit.com/message/compose?to=/r/"+sub+"&subject=So&message="+document.URL})()
 
-Modmail current page using JQ:
+Modmail current page to the subreddit you're on, using JQ:
 	
 	jjavascript:(function(){var sub = $('.redditname a').first().text(); var url = document.URL;window.location.href = "http://www.reddit.com/message/compose/?to=/r/"+sub+"&subject=so"+"&message="+url;})()
 
