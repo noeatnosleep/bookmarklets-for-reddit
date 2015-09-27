@@ -4,41 +4,35 @@ These bookmarklets are for use with reddit. They're particularly useful to moder
 Submit current userpage to /r/spam:
 
 ```javascript
-javascript:(function(){var user = document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href = "http://www.reddit.com/r/spam/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
+javascript:(function(){var user=document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href="http://www.reddit.com/r/spam/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
 ```
 
 
 Send current page to Admin:
 
 ```javascript
-javascript:(function(){var currentUrl = document.URL;window.location.href = "http://www.reddit.com/message/compose/?to=/r/reddit.com&subject=spammer&message="+currentUrl})()
+javascript:(function(){var currentUrl=document.URL;window.location.href="http://www.reddit.com/message/compose/?to=/r/reddit.com&subject=spammer&message="+currentUrl})()
 ```
 
 
 Submit current page to reddit:
 
 ```javascript
-javascript:(function(){var currentUrl = document.URL;window.location.href = "http://www.reddit.com/submit/?resubmit=true&url="+currentUrl})()
+javascript:(function(){var currentUrl=document.URL;window.location.href="http://www.reddit.com/submit/?resubmit=true&url="+currentUrl})()
 ```
 
 
 Open banned page of current subreddit:
 
 ```javascript
-javascript:(function(){var url = document.URL.match(new RegExp("/r/[a-zA-Z0-9_\-]*"));window.location.href = "http://www.reddit.com" + url +"/about/banned"})()
+javascript:(function(){var url=document.URL.match(/\/r\/[a-z0-9_]+/i));window.location.href="http://www.reddit.com"+url+"/about/banned"})()
 ```
 
 
 Modmail current page to the subreddit you're on, using scraping:
 
 ```javascript
-javascript:(function(){var sub = document.URL.match(/\/r\/[a-z0-9_]+/i);window.location.href ="https://www.reddit.com/message/compose?to=/r/"+sub+"&subject=So&message="+document.URL})()
-```
-
-Modmail current page to the subreddit you're on, using JQ:
-	
-```javascript
-javascript:(function(){var sub = $('.redditname a').first().text(); var url = document.URL;window.location.href = "http://www.reddit.com/message/compose/?to=/r/"+sub+"&subject=so"+"&message="+url;})()
+javascript:(function(){var sub=document.URL.match(/\/r\/[a-z0-9_]+/i);window.location.href ="https://www.reddit.com/message/compose?to=/r/"+sub+"&subject=So&message="+document.URL})()
 ```
 
 
