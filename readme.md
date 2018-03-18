@@ -1,10 +1,10 @@
 These bookmarklets are for use with reddit. They're particularly useful to moderators.
 
 
-Submit current userpage to /r/spam:
+Submit current userpage to /r/botbust:
 
 ```javascript
-javascript:(function(){var user=document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href="http://www.reddit.com/r/spam/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
+javascript:(function(){var user=document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href="http://www.reddit.com/r/botbust/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
 ```
 
 
@@ -29,7 +29,7 @@ javascript:(function(){var url=document.URL.match(/\/r\/[a-z0-9_]+/i));window.lo
 ```
 
 
-Modmail current page to the subreddit you're on, using scraping:
+Modmail current page to the subreddit you're on,
 
 ```javascript
 javascript:(function(){var sub=document.URL.match(/\/r\/[a-z0-9_]+/i);window.location.href ="https://www.reddit.com/message/compose?to=/r/"+sub+"&subject=So&message="+document.URL})()
