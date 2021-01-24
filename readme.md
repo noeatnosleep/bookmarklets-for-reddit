@@ -1,10 +1,10 @@
 These bookmarklets are for use with reddit. They're particularly useful to moderators.
 
 
-Submit currenty displayed userpage to /r/botbust:
+Submit currenty displayed userpage to /r/botdefense:
 
 ```javascript
-javascript:(function(){var user=document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href="http://www.reddit.com/r/botbust/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
+javascript:(function(){var user=document.URL.match(/\/(user|u)\/(([a-zA-Z_0-9\-]*?)+\b)/);window.location.href="http://www.reddit.com/r/botdefense/submit?resubmit=true&title=overview for "+user[2]+"&url=http://reddit.com/u/"+user[2]})()
 ```
 
 
